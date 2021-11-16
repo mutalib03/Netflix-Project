@@ -1,9 +1,9 @@
  import React from 'react';
- 
+ import { Container, Row, Column, Link,Title,Text, Break } from './styles/footer-styles';
  const Footer = ({children, ...restProps}) => {
      return ( 
-   <Container{...restProps}>
-  {children}
+   <Container {...restProps}>
+  {children} 
    </Container>
       );
  }
@@ -26,5 +26,9 @@ Footer.Title = function FooterTitle({children, ...otherProps}) {
 
 Footer.Text = function FooterText({children, ...otherProps}) {
     return <Text {...otherProps}>{children}</Text>
+}
+
+Footer.Break = function FooterBreak({children, ...otherProps}) {
+    return <Break {...otherProps}>{children}</Break>
 }
  export default Footer;
